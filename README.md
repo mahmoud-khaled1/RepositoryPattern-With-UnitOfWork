@@ -1,6 +1,6 @@
 # What is the diff between the Repository Design pattern and the Unit of Work in c#?
 The Repository Design Pattern and the Unit of Work Pattern are two separate design patterns often used together to manage data access and persistence in C# applications,
- especially when working with databases. Here's a brief explanation of each pattern and the key differences between them: </br>
+ especially when working with databases. Here's a brief explanation of each pattern and the key differences between them: 
 </br>
 1. Repository Design Pattern:</br>
  Purpose: The Repository pattern provides an abstraction layer over the data source (usually a database) and separates the application's business logic from the data access code.</br>
@@ -13,7 +13,7 @@ Promotes code reusability by centralizing data access operations.</br>
 Enhances testability by allowing for the use of mock repositories in unit tests.</br>
 </br>
 </br>
-2. Unit of Work Pattern:
+ 2. Unit of Work Pattern:
 
 Purpose: The Unit of Work pattern is responsible for managing the lifecycle of database transactions and ensuring that changes made to multiple repositories within a single transaction are either committed together or rolled back as a single unit.</br>
 Components:</br>
@@ -23,7 +23,7 @@ Ensures data consistency by wrapping multiple data-related operations (inserts, 
 Reduces the overhead of opening and closing database connections for each repository separately.</br>
 Simplifies error handling by providing a clear way to handle transaction failures.</br>
 </br>
-Key Differences:</br>
+3. Key Differences:
 
 Repository Pattern focuses on abstracting the data access layer and provides a way to interact with domain entities, while the Unit of Work Pattern focuses on managing transactions and the coordination of multiple repositories.</br>
 The Repository Pattern deals with individual entities (e.g., Customer, Product), while the Unit of Work Pattern deals with transactions that involve multiple entities and repositories.</br>
