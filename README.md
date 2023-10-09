@@ -12,7 +12,6 @@ Encapsulates data access logic, making it easier to change the underlying data s
 Promotes code reusability by centralizing data access operations.</br>
 Enhances testability by allowing for the use of mock repositories in unit tests.</br>
 </br>
-</br>
  2. Unit of Work Pattern:
 
 Purpose: The Unit of Work pattern is responsible for managing the lifecycle of database transactions and ensuring that changes made to multiple repositories within a single transaction are either committed together or rolled back as a single unit.</br>
@@ -23,11 +22,11 @@ Ensures data consistency by wrapping multiple data-related operations (inserts, 
 Reduces the overhead of opening and closing database connections for each repository separately.</br>
 Simplifies error handling by providing a clear way to handle transaction failures.</br>
 </br>
-3. Key Differences:
-
+3. Key Differences:</br>
 Repository Pattern focuses on abstracting the data access layer and provides a way to interact with domain entities, while the Unit of Work Pattern focuses on managing transactions and the coordination of multiple repositories.</br>
 The Repository Pattern deals with individual entities (e.g., Customer, Product), while the Unit of Work Pattern deals with transactions that involve multiple entities and repositories.</br>
 The Repository Pattern typically has methods for CRUD (Create, Read, Update, Delete) operations on individual entities, while the Unit of Work Pattern is concerned with committing or rolling back changes made across multiple repositories as a single unit.</br>
 These patterns often work together in a layered architecture, where the Unit of Work manages the transactional aspects, and the Repositories provide the actual data access and manipulation methods.</br>
-In summary, the Repository Pattern provides a way to abstract and manage data access for individual entities, while the Unit of Work Pattern ensures transactional consistency when working with multiple repositories and entities. Together, they provide a robust mechanism for handling data access and persistence in C# applications.</br>
+
+4. In summary: </br> the Repository Pattern provides a way to abstract and manage data access for individual entities, while the Unit of Work Pattern ensures transactional consistency when working with multiple repositories and entities. Together, they provide a robust mechanism for handling data access and persistence in C# applications.</br>
 
